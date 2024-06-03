@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+// The service definition
+service ComparatorService {
+  // Sends a string and receives a response
+  rpc CompareCard (CompareRequest) returns (DataResponse) {};
+  rpc CompareCost (CompareRequest) returns (DataResponse) {};
+  rpc CanBeBroadcast (BroadcastRequest) returns (DataResponse) {};
+}
+
+// The request message containing the data
+message CompareRequest {
+  repeated string data = 1;
+  string attribute_map = 2;
+  repeated string estimated_card = 3;
+}
+
+message BroadcastRequest {
+  repeated string data = 1;
+  string attribute_map = 2;
+  repeated string estimated_card = 3;
+  repeated int64 threshold = 4;
+}
+
+// The response message containing the processed data
+message DataResponse {
+  repeated bool result = 1;
+}
