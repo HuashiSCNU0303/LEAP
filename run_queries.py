@@ -34,7 +34,7 @@ EXTRA_KNOBS = {
     'spark.card.rpc.port': 9009,
     'spark.card.rpc.host': 'localhost',
     'spark.card.beamsearch.k': '4',
-    'spark.sql.extensions': 'org.example.CustomExtension',  # 不要改这个
+    'spark.sql.extensions': 'org.example.CustomExtension',  # Do not change this knob
     'spark.card.join.reorder.class': 'SplitOrLeftDeepJoinReorder'
 }
 
