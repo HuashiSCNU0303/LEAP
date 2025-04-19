@@ -255,7 +255,7 @@ def serve(port, paths):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', type=int, default=9009, help='Port for the cardinality estimation RPC server.')
-    parser.add_argument('--dataset_name', type=int, default=9009, help='Port for the cardinality estimation RPC server.')
+    parser.add_argument('--dataset_name', type=str, default='', help='Port for the cardinality estimation RPC server.')
     parser.add_argument('--c', type=int, default=16)
     parser.add_argument('--epsilon', type=float, default=0.5)
     opt = parser.parse_args()
